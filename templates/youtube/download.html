@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block details %}
+
+<h1>{{ title }}</h1>
+<div class="details">
+    <div class="thumb">
+        <img src="{{ thumbnail }}" alt="">
+    </div>
+    
+    <div class="res_sect">
+        <h4>Download Videos:</h4>
+        <ul class="resolutions">
+            {% for res in resolutions %}
+                {% if res.stream %}
+
+                    <li class="res">
+                        <a href="{{ res.stream.url }}" class="btn">{{ res.resolution }}</a>
+                    </li>
+
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+        <h4>Download Audio:</h4>
+        <ul class="audios">
+            {% for audio in audios %}
+                {% if audio.stream %}
+                    <li class="mp4">
+                        <a href="{{ audio.stream.first.url }}" class="btn">{{ audio.abr }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+        
+</div>
+
+{% endblock details %}

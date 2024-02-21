@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+
+{% block form %}
+    <h1>Online Video Downloader For Free</h1>
+    <p>Best All Video Downloader Online and Free</p>
+    <form method='POST' action="{% url 'facebook_details' %}">
+        {% csrf_token %}
+        <input type='text' placeholder='Paste facebook link here' name="url">
+        <button type="submit" class="btn">Download</button>
+    </form>
+{% endblock form %}
