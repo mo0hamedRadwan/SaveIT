@@ -3,7 +3,7 @@
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
 - Python
-- Django
+- Django framework
 - Django Templates
 - Pytube
 
@@ -35,13 +35,13 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/adrianhajdin/nike_landing_page.git
-cd nike_landing_page
+git clone https://github.com/mo0hamedRadwan/SaveIT.git
+cd video_downloader
 ```
 
 **Installation**
 
-Install the project dependencies using npm:
+Install the project dependencies using pip:
 
 ```bash
 pip install -r requirements.txt
